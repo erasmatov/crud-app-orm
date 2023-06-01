@@ -1,6 +1,7 @@
 package net.erasmatov.crudapp.model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Developer {
     private Integer id;
@@ -68,6 +69,19 @@ public class Developer {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Developer developer = (Developer) o;
+        return Objects.equals(id, developer.id) && Objects.equals(firstName, developer.firstName) && Objects.equals(lastName, developer.lastName) && Objects.equals(skills, developer.skills) && Objects.equals(specialty, developer.specialty) && status == developer.status;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, skills, specialty, status);
     }
 
     @Override
