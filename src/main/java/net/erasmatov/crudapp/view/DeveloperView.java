@@ -16,7 +16,7 @@ public class DeveloperView {
     private final DeveloperController developerController = new DeveloperController();
     private final SkillController skillController = new SkillController();
     private final SpecialtyController specialtyController = new SpecialtyController();
-    Scanner input = new Scanner(System.in);
+    private final Scanner input = new Scanner(System.in);
 
     public void showDeveloperMenu() {
         int option;
@@ -156,13 +156,13 @@ public class DeveloperView {
                 System.out.println("\n" + skills);
             }
             System.out.print("Select Skills by id, enter 0 to finish. > ");
-            Integer idSkill = input.nextInt();
+            int idSkill = input.nextInt();
 
             if (idSkill == 0) {
                 System.out.println("\nSelected skills:\n" + skills + "\n");
                 break;
             }
-            if (idSkill == null) {
+            if (idSkill < 0) {
                 System.out.println("Invalid input");
             }
 

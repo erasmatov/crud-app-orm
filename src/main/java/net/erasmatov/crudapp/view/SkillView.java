@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SkillView {
-    SkillController skillController = new SkillController();
-    Scanner input = new Scanner(System.in);
+    private final SkillController skillController = new SkillController();
+    private final Scanner input = new Scanner(System.in);
 
     public void showSkillMenu() {
         int option;

@@ -49,7 +49,7 @@ public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
             String skill_name = resultSet.getString("skill_name");
             String skill_status = resultSet.getString("skill_status");
 
-            if (skill_id != null && skill_name != null && skill_status != null) {
+            if (skill_name != null && skill_status != null) {
                 skill.setId(skill_id);
                 skill.setName(skill_name);
                 skill.setStatus(Status.valueOf(skill_status));

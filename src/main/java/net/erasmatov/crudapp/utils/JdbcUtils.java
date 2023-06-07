@@ -22,7 +22,7 @@ public class JdbcUtils {
             String USERNAME = null;
             String PASSWORD = null;
 
-            try (InputStream fileInputStream = new FileInputStream("src/main/resources/config.properties")) {
+            try (InputStream fileInputStream = new FileInputStream("src/main/resources/application.properties")) {
                 PROPERTIES.load(fileInputStream);
                 URL = PROPERTIES.getProperty("url");
                 USERNAME = PROPERTIES.getProperty("username");
@@ -42,7 +42,7 @@ public class JdbcUtils {
 
     public static PreparedStatement getPreparedStatement(String sql) {
         try {
-            return getJdbcMysqlConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            return getJdbcMysqlConnection().prepareStatement(sql);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
             return null;

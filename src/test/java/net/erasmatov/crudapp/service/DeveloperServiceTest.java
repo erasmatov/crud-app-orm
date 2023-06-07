@@ -20,6 +20,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -71,6 +72,7 @@ class DeveloperServiceTest {
     @Test
     void deleteDeveloperById() {
         Mockito.doNothing().when(developerRepository).deleteById(any(Integer.class));
+        Mockito.verify(developerRepository, times(1)).deleteById(any());
         developerService.deleteDeveloperById(1);
     }
 

@@ -3,8 +3,9 @@ package net.erasmatov.crudapp.view;
 import java.util.Scanner;
 
 public class MainView {
-    public static void showMainMenu() {
-        Scanner input = new Scanner(System.in);
+    private final Scanner input = new Scanner(System.in);
+
+    public void showMainMenu() {
         int option;
 
         do {
