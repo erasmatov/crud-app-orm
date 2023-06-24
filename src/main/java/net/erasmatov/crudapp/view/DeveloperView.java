@@ -81,6 +81,7 @@ public class DeveloperView {
                     System.out.print("\nEnter Developer's id for update: ");
                     Integer developerIdForUpdate = input.nextInt();
                     Developer updateDeveloper = developerController.getDeveloperById(developerIdForUpdate);
+                    input.nextLine();
                     System.out.print("\nFirstName: ");
                     String updateFirstName = input.nextLine();
 
@@ -155,21 +156,21 @@ public class DeveloperView {
             if (!skills.isEmpty()) {
                 System.out.println("\n" + skills);
             }
+
             System.out.print("Select Skills by id, enter 0 to finish. > ");
             int idSkill = input.nextInt();
 
+            if (idSkill > 0) {
+                Skill skill = skillController.getSkillById(idSkill);
+                skills.add(skill);
+            }
             if (idSkill == 0) {
                 System.out.println("\nSelected skills:\n" + skills + "\n");
-                break;
-            }
-            if (idSkill < 0) {
+                return skills;
+            } else {
                 System.out.println("Invalid input");
             }
-
-            Skill skill = skillController.getSkillById(idSkill);
-            skills.add(skill);
         }
-        return skills;
     }
 
     private void showSkillsForDeveloper() {

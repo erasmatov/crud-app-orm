@@ -17,6 +17,18 @@ import java.util.Map;
 
 public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
 
+    private void removeSkillsForUpdateDeveloper(Integer developerId) {
+        final String SQL_REMOVE_SKILLS_BY_ID_DEVELOPER =
+                "DELETE FROM developers_skills WHERE developer_id = ?;";
+
+        try (PreparedStatement preparedStatement = JdbcUtils.getPreparedStatement(SQL_REMOVE_SKILLS_BY_ID_DEVELOPER)) {
+            preparedStatement.setInt(1, developerId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     private List<Skill> saveSkillsForDeveloper(Integer developerId, List<Skill> skillList) {
 
         final String SQL_SAVE_DEVELOPER_SKILLS =
@@ -211,6 +223,8 @@ public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
             preparedStatement.setInt(4, developer.getSpecialty().getId());
             preparedStatement.setInt(5, developer.getId());
             preparedStatement.executeUpdate();
+            removeSkillsForUpdateDeveloper(developer.getId());
+            saveSkillsForDeveloper(developer.getId(), developer.getSkills());
 
         } catch (SQLException e) {
             e.printStackTrace();

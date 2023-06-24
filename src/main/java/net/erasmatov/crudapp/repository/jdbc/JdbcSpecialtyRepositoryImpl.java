@@ -121,7 +121,7 @@ public class JdbcSpecialtyRepositoryImpl implements SpecialtyRepository {
     @Override
     public Specialty update(Specialty specialty) {
 
-        final String SQL_UPDATE_SPECIALTY = "UPDATE specialty SET name = ?, status = ? WHERE id = ?;";
+        final String SQL_UPDATE_SPECIALTY = "UPDATE specialties SET name = ?, status = ? WHERE id = ?;";
 
         try (PreparedStatement preparedStatement = JdbcUtils.getPreparedStatement(SQL_UPDATE_SPECIALTY)) {
             preparedStatement.setString(1, specialty.getName());

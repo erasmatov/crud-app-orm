@@ -53,10 +53,12 @@ public class SpecialtyView {
                     break;
 
                 case 3:
+                    System.out.println();
                     showAllSpecialties();
                     System.out.print("\nEnter Specialty's id for update: ");
                     Integer specialtyIdForUpdate = input.nextInt();
                     Specialty updateSpecialty = specialtyController.getSpecialtyById(specialtyIdForUpdate);
+                    input.nextLine();
                     System.out.print("\nSpecialty Name: ");
                     String updateSpecialtyName = input.nextLine();
 

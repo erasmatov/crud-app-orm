@@ -15,7 +15,6 @@ public class JdbcUtils {
     private static Connection getJdbcMysqlConnection() {
 
         if (connection == null) {
-
             final Properties PROPERTIES = new Properties();
 
             String URL = null;

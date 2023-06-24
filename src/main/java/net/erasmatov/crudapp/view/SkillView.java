@@ -57,6 +57,7 @@ public class SkillView {
                     System.out.print("\nEnter Skill's id for update: ");
                     Integer skillIdForUpdate = input.nextInt();
                     Skill updateSkill = skillController.getSkillById(skillIdForUpdate);
+                    input.nextLine();
                     System.out.print("\nSkill Name: ");
                     String updateSkillName = input.nextLine();
 
