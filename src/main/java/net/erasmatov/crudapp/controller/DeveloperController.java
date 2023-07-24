@@ -5,8 +5,9 @@ import net.erasmatov.crudapp.service.DeveloperService;
 
 import java.util.List;
 
+
 public class DeveloperController {
-    public DeveloperService developerService = new DeveloperService();
+    private final DeveloperService developerService = new DeveloperService();
 
     public List<Developer> getAllDevelopers() {
         return developerService.getAllDevelopers();

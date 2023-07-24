@@ -2,6 +2,7 @@ package net.erasmatov.crudapp.repository;
 
 import java.util.List;
 
+
 public interface GenericRepository<T, ID> {
     List<T> getAll();
 
@@ -12,4 +13,5 @@ public interface GenericRepository<T, ID> {
     T save(T t);
 
     T update(T t);
+
 }

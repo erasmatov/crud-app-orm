@@ -2,12 +2,13 @@ package net.erasmatov.crudapp.service;
 
 import net.erasmatov.crudapp.model.Skill;
 import net.erasmatov.crudapp.repository.SkillRepository;
-import net.erasmatov.crudapp.repository.jdbc.JdbcSkillRepositoryImpl;
+import net.erasmatov.crudapp.repository.hibernate.HibernateSkillRepositoryImpl;
 
 import java.util.List;
 
+
 public class SkillService {
-    SkillRepository skillRepository = new JdbcSkillRepositoryImpl();
+    private final SkillRepository skillRepository = new HibernateSkillRepositoryImpl();
 
     public List<Skill> getSkills() {
         return skillRepository.getAll();
@@ -28,4 +29,5 @@ public class SkillService {
     public void deleteSkillById(Integer id) {
         skillRepository.deleteById(id);
     }
+
 }
