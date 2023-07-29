@@ -21,7 +21,8 @@ public class Specialty {
     public Specialty() {
     }
 
-    public Specialty(String name, Status status) {
+    public Specialty(Integer id, String name, Status status) {
+        this.id = id;
         this.name = name;
         this.status = status;
     }

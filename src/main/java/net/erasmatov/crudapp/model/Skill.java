@@ -21,7 +21,8 @@ public class Skill {
     public Skill() {
     }
 
-    public Skill(String name, Status status) {
+    public Skill(Integer id, String name, Status status) {
+        this.id = id;
         this.name = name;
         this.status = status;
     }

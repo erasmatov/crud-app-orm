@@ -37,7 +37,8 @@ public class Developer {
     public Developer() {
     }
 
-    public Developer(String firstName, String lastName, Set<Skill> skills, Specialty specialty, Status status) {
+    public Developer(Integer id, String firstName, String lastName, Set<Skill> skills, Specialty specialty, Status status) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.skills = skills;

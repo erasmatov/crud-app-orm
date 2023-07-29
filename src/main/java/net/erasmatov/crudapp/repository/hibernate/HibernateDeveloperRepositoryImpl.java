@@ -12,7 +12,7 @@ import java.util.List;
 
 
 public class HibernateDeveloperRepositoryImpl implements DeveloperRepository {
-    Transaction transaction = null;
+    private Transaction transaction = null;
 
     @Override
     public List<Developer> getAll() {
