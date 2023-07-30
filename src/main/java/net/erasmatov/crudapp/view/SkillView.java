@@ -7,7 +7,6 @@ import net.erasmatov.crudapp.model.Status;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class SkillView {
     private final SkillController skillController = new SkillController();
     private final Scanner input = new Scanner(System.in);

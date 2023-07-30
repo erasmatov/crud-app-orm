@@ -5,7 +5,6 @@ import net.erasmatov.crudapp.service.SkillService;
 
 import java.util.List;
 
-
 public class SkillController {
     private final SkillService skillService = new SkillService();
 

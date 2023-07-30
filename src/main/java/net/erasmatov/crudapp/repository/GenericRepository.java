@@ -2,7 +2,6 @@ package net.erasmatov.crudapp.repository;
 
 import java.util.List;
 
-
 public interface GenericRepository<T, ID> {
     List<T> getAll();
 

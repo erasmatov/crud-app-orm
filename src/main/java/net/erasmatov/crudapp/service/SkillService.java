@@ -6,9 +6,16 @@ import net.erasmatov.crudapp.repository.hibernate.HibernateSkillRepositoryImpl;
 
 import java.util.List;
 
-
 public class SkillService {
-    private final SkillRepository skillRepository = new HibernateSkillRepositoryImpl();
+    private final SkillRepository skillRepository;
+
+    public SkillService() {
+        skillRepository = new HibernateSkillRepositoryImpl();
+    }
+
+    public SkillService(SkillRepository skillRepository) {
+        this.skillRepository = skillRepository;
+    }
 
     public List<Skill> getSkills() {
         return skillRepository.getAll();

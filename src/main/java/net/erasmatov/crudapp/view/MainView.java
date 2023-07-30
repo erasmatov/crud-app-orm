@@ -2,7 +2,6 @@ package net.erasmatov.crudapp.view;
 
 import java.util.Scanner;
 
-
 public class MainView {
     private final DeveloperView developerView;
     private final SkillView skillView;

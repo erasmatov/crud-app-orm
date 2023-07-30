@@ -2,7 +2,6 @@ package net.erasmatov.crudapp.model;
 
 import jakarta.persistence.*;
 
-
 @Entity
 @Table(name = "specialties")
 public class Specialty {

@@ -9,7 +9,6 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-
 public class HibernateSpecialtyRepositoryImpl implements SpecialtyRepository {
     private Transaction transaction = null;
 

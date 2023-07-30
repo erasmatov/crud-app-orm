@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-
 public class DeveloperView {
     private final DeveloperController developerController = new DeveloperController();
     private final SkillController skillController = new SkillController();

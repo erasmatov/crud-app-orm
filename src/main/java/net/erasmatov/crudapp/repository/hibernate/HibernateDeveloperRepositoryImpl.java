@@ -10,7 +10,6 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-
 public class HibernateDeveloperRepositoryImpl implements DeveloperRepository {
     private Transaction transaction = null;
 

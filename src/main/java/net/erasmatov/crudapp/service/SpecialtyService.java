@@ -6,9 +6,16 @@ import net.erasmatov.crudapp.repository.hibernate.HibernateSpecialtyRepositoryIm
 
 import java.util.List;
 
-
 public class SpecialtyService {
-    private final SpecialtyRepository specialtyRepository = new HibernateSpecialtyRepositoryImpl();
+    private final SpecialtyRepository specialtyRepository;
+
+    public SpecialtyService() {
+        specialtyRepository = new HibernateSpecialtyRepositoryImpl();
+    }
+
+    public SpecialtyService(SpecialtyRepository specialtyRepository) {
+        this.specialtyRepository = specialtyRepository;
+    }
 
     public List<Specialty> getSpecialties() {
         return specialtyRepository.getAll();

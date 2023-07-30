@@ -9,7 +9,6 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-
 public class HibernateSkillRepositoryImpl implements SkillRepository {
     private Transaction transaction = null;
 

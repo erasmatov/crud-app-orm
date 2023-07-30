@@ -6,7 +6,6 @@ import net.erasmatov.crudapp.repository.hibernate.HibernateDeveloperRepositoryIm
 
 import java.util.List;
 
-
 public class DeveloperService {
     private final DeveloperRepository developerRepository;
 

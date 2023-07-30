@@ -4,7 +4,6 @@ import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import org.flywaydb.core.Flyway;
 
-
 public class FlywayUtil {
     public static void flywayMigrate() {
         Config config = ConfigFactory.load();

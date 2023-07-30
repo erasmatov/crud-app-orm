@@ -7,7 +7,6 @@ import net.erasmatov.crudapp.model.Status;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class SpecialtyView {
     private final SpecialtyController specialtyController = new SpecialtyController();
     private final Scanner input = new Scanner(System.in);
