@@ -15,7 +15,7 @@ public class HibernateSpecialtyRepositoryImpl implements SpecialtyRepository {
     @Override
     public List<Specialty> getAll() {
         try (Session session = HibernateUtil.getSession()) {
-            return session.createQuery("from Specialty", Specialty.class).list();
+            return session.createQuery("FROM Specialty", Specialty.class).list();
         }
     }
 

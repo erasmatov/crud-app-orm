@@ -15,7 +15,7 @@ public class HibernateSkillRepositoryImpl implements SkillRepository {
     @Override
     public List<Skill> getAll() {
         try (Session session = HibernateUtil.getSession()) {
-            return session.createQuery("from Skill", Skill.class).list();
+            return session.createQuery("FROM Skill", Skill.class).list();
         }
     }
 

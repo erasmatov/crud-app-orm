@@ -12,10 +12,10 @@ public class HibernateUtil {
     private static SessionFactory sessionFactory;
 
     public static Session getSession() {
-        return getSessionFactory().openSession();
+        return buildSessionFactory().openSession();
     }
 
-    public static SessionFactory getSessionFactory() {
+    public static SessionFactory buildSessionFactory() {
         if (sessionFactory == null) {
             try {
                 registry = new StandardServiceRegistryBuilder()
